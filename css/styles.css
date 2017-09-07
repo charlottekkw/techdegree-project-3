@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body, [placeholder] {
+  font-family: 'Gentium Book Basic', serif;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/****** heading ******/
+
+header, footer {
+  background: #4360a2;
+  padding: 10px 0;
+  color: #fff;
+}
+
+h1, h2 {
+  font-size: 1.3em;
+}
+
+header, .intro, footer {
+  text-align: center;
+}
+
+.intro {
+  padding: 15px 0;
+  border-bottom: 4px solid #000;
+  position: relative;
+}
+
+.intro::after {
+  content:"";
+  display: block;
+  position: absolute;
+  border-bottom: 2px solid #000;
+  bottom: -8px;
+  width: 100%;
+  background: #000;
+}
+
+/****** body - Contact Information ******/
+
+fieldset {
+  border: none;
+}
+
+.col {
+  margin: 25px 0;
+  padding: 25px 0;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.info input[type], select, textarea {
+  width: 100%;
+  background: #e8ebf5;
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 2px solid transparent;
+}
+
+.info input[type]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #6e94d8;
+  color: #000;
+  text-align: left;
+}
+
+.info input[placeholder] {
+  text-align: right;
+  color: #f7f7f7;
+  /*font-style: italic;*/
+}
+
+input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+/*.opt {
+  color: red;
+}*/
+
+.info {
+  border-bottom: 2px solid #000;
+}
+
+/****** body - Newsletter ******/
+
+.news input {
+  padding: 10px 0;
+}
+
+
+@media (min-width: 768px) {
+
+
+}
