@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 
-body, [placeholder] {
+body, [placeholder], input, textarea, select {
   font-family: 'Gentium Book Basic', serif;
+  color: #474747;
 }
 
 .wrapper {
@@ -13,8 +14,8 @@ body, [placeholder] {
 
 /****** heading ******/
 
-header, footer {
-  background: #4360a2;
+header{
+  background: #6699CC;
   padding: 10px 0;
   color: #fff;
 }
@@ -59,7 +60,7 @@ legend {
   font-weight: 700;
 }
 
-.info input[type], select, textarea {
+.info input[type], select, textarea, button {
   width: 100%;
   background: #e8ebf5;
   border-radius: 4px;
@@ -67,6 +68,10 @@ legend {
   margin-top: 10px;
   margin-bottom: 15px;
   border: 2px solid transparent;
+}
+
+select {
+  height: 42px;
 }
 
 .info input[type]:focus,
@@ -78,10 +83,13 @@ textarea:focus {
   text-align: left;
 }
 
-.info input[placeholder] {
+.info input::placeholder,
+textarea::placeholder {
+  color: #aeaeae;
+}
+
+.info input::placeholder {
   text-align: right;
-  color: #f7f7f7;
-  /*font-style: italic;*/
 }
 
 input:focus::-ms-input-placeholder {
@@ -93,9 +101,13 @@ textarea:focus::placeholder {
   color: transparent;
 }
 
-/*.opt {
-  color: red;
-}*/
+.info input[id="zip"] {
+  width: 50%;
+}
+
+.info label {
+  display: block;
+}
 
 .info {
   border-bottom: 2px solid #000;
@@ -103,12 +115,95 @@ textarea:focus::placeholder {
 
 /****** body - Newsletter ******/
 
-.news input {
-  padding: 10px 0;
+.newsletter {
+  padding: 5px 0;
+  margin-bottom: -20px;
+}
+
+.news {
+  margin: 25px 0;
+}
+
+.choice {
+  margin: 15px 0;
+}
+
+.newsletter input + label {
+  margin-left: 10px;
+}
+
+textarea {
+  height: 120px;
+}
+
+button {
+  color: #fff;
+  height: 50px;
+  outline: none;
+}
+
+button[type="submit"] {
+  background: #8dd6c9;
+}
+
+button[type="reset"] {
+  background: #f5dc5f;
+}
+
+button + button {
+  margin-top: 0;
+}
+
+/****** footer ******/
+
+footer {
+  font-style: italic;
 }
 
 
 @media (min-width: 768px) {
+
+  .wrapper {
+    max-width: 60%;
+  }
+
+  .info label{
+    display: inline-block;
+  }
+
+  .info {
+    display: flex;
+  }
+
+  .items {
+    display: flex;
+  }
+
+  .items input[type], .items select {
+    flex-basis: 70%;
+  }
+
+  .items label {
+    align-self: center;
+    margin-right: auto;
+  }
+
+  .info input[id="zip"] {
+    flex: 0 35%;
+    margin-right: 35%;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn button {
+    align-self: center;
+    margin: 10px 0;
+    flex: 0 47.5%;
+  }
+
 
 
 }
