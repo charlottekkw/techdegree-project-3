@@ -7,6 +7,10 @@ body, [placeholder], input, textarea, select {
   color: #474747;
 }
 
+body {
+  background: linear-gradient(#fffde9, transparent 120%) no-repeat;
+}
+
 .wrapper {
   max-width: 90%;
   margin: 0 auto;
@@ -41,7 +45,6 @@ header, .intro, footer {
   border-bottom: 2px solid #000;
   bottom: -8px;
   width: 100%;
-  background: #000;
 }
 
 /****** body - Contact Information ******/
@@ -79,8 +82,8 @@ select:focus,
 textarea:focus {
   outline: none;
   border: 2px solid #6e94d8;
-  color: #000;
-  text-align: left;
+  background-color: #fcfcff;
+  transition: background-color 0.4s;
 }
 
 .info input::placeholder,
@@ -158,6 +161,7 @@ button + button {
 
 footer {
   font-style: italic;
+  margin: 30px 0;
 }
 
 
